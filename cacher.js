@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
   });
 
-  app.get("/multi/:number?", (req, res) => {
+  app.get("/", (req, res) => {
  
     res.send('This is a headless server of an app ( ͡° ͜ʖ ͡°)');
   });
