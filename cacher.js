@@ -1,5 +1,5 @@
 const fs = require ('fs')
-const words = require("../server/dict")
+const words = require("./dict")
 const path = require("path");
 const express = require("express");
 const app = express(); // express app
