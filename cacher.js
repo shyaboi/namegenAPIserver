@@ -3,7 +3,7 @@ const words = require("./dict")
 const path = require("path");
 const express = require("express");
 const app = express(); // express app
-
+const PORT = process.env.PORT || 5000
 app.use(express.static("public"));
 app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -87,6 +87,6 @@ app.get("/10", (req, res) => {
   });
   
   // start express server on port 5000
-  app.listen(5000, () => {
+  app.listen(PORT, () => {
     console.log("server started on port 5000");
   });
