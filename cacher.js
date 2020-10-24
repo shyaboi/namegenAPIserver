@@ -85,6 +85,17 @@ app.get("/10", (req, res) => {
     }
     res.send(wordCache);
   });
+
+  app.get("/100000", (req, res) => {
+    let wordCache = []
+    // console.log(wordCache)
+    for (let i = 0; i < 10000; i++) {
+        var randomWord = words[Math.floor(Math.random() * words.length)];
+        wordCache.push(randomWord)
+        // console.log(wordCache)
+    }
+    res.send(wordCache);
+  });
   
   // start express server on port 5000
   app.listen(PORT, () => {
