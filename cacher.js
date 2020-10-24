@@ -20,6 +20,25 @@ app.use(function (req, res, next) {
   });
 
 
+
+  app.get("/alpha/:letter?", (req, res) => {
+
+    console.log(req.params.letter)
+    let wordCache = []
+    var myFunc = function (letter) {
+      for (var i = 0; i < letter.length; i += 1) {
+          // Use the index i here
+          if (letter[i].charAt(0)==req.params.letter){
+          // console.log(letter[i]);
+          wordCache.push(letter[i])
+        }
+      }
+  }
+  myFunc(words)
+    res.send(wordCache);
+  });
+
+
   app.get("/multi/:number?", (req, res) => {
     console.log(req.params.number)
     let wordCache = []
@@ -99,5 +118,5 @@ app.get("/10", (req, res) => {
   
   // start express server on port 5000
   app.listen(PORT, () => {
-    console.log("server started on port 5000");
+    console.log("server started on port "+PORT);
   });
