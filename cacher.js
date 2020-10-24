@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 
   app.get("/", (req, res) => {
  
-    res.send('This is a headless server of an app ( ͡° ͜ʖ ͡°)');
+    res.send('This is the head of a headless server ( ͡° ͜ʖ ͡°)');
   });
 
 
