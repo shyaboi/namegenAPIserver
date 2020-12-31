@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 
   app.get("/", (req, res) => {
  
-    res.send('This is the head of a headless server ( ͡° ͜ʖ ͡°)');
+    res.send('Welcome to UselessAPI.com <br> At the moment, this is the head of a headless server ( ͡° ͜ʖ ͡°)');
   });
 
 
