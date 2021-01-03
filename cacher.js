@@ -14,14 +14,14 @@ app.use(function (req, res, next) {
     next();
   });
 
-  app.get("/api/name-gen/", (req, res) => {
+  app.get("/name-gen/", (req, res) => {
  
     res.send('Welcome to UselessAPI.com <br> At the moment, this is the head of a headless server ( ͡° ͜ʖ ͡°)');
   });
 
 
 
-  app.get("/api/name-gen/alpha/:letter?", (req, res) => {
+  app.get("/name-gen/alpha/:letter?", (req, res) => {
 
     console.log(req.params.letter)
     let wordCache = []
@@ -39,7 +39,7 @@ app.use(function (req, res, next) {
   });
 
 
-  app.get("/api/name-gen/multi/:number?", (req, res) => {
+  app.get("/name-gen/multi/:number?", (req, res) => {
     console.log(req.params.number)
     let wordCache = []
     for (let i = 0; i < req.params.number; i++) {
@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
   });
 
 
-  app.get("/api/name-gen/1", (req, res) => {
+  app.get("/name-gen/1", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
         var randomWord = words[Math.floor(Math.random() * words.length)];
@@ -61,7 +61,7 @@ app.use(function (req, res, next) {
   });
 
 
-app.get("/api/name-gen/10", (req, res) => {
+app.get("/name-gen/10", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
     for (let i = 0; i < 10; i++) {
@@ -72,7 +72,7 @@ app.get("/api/name-gen/10", (req, res) => {
     res.send(wordCache);
   });
 
-  app.get("/api/name-gen/100", (req, res) => {
+  app.get("/name-gen/100", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
     for (let i = 0; i < 100; i++) {
@@ -83,7 +83,7 @@ app.get("/api/name-gen/10", (req, res) => {
     res.send(wordCache);
   });
 
-  app.get("/api/name-gen/1000", (req, res) => {
+  app.get("/name-gen/1000", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
     for (let i = 0; i < 1000; i++) {
@@ -94,7 +94,7 @@ app.get("/api/name-gen/10", (req, res) => {
     res.send(wordCache);
   });
 
-  app.get("/api/name-gen/10000", (req, res) => {
+  app.get("/name-gen/10000", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
     for (let i = 0; i < 10000; i++) {
@@ -105,7 +105,7 @@ app.get("/api/name-gen/10", (req, res) => {
     res.send(wordCache);
   });
 
-  app.get("/api/name-gen/100000", (req, res) => {
+  app.get("/name-gen/100000", (req, res) => {
     let wordCache = []
     // console.log(wordCache)
     for (let i = 0; i < 100000; i++) {
